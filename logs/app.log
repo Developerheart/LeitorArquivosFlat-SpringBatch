@@ -43,3 +43,646 @@
 2023-01-16 11:18:25,114 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=4, arquivoClientes=file:files/clientesDelimited.txt}] and the following status: [COMPLETED] in 172ms
 2023-01-16 11:18:25,118 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2023-01-16 11:18:25,127 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 11:40:06,379 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 19132 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:40:06,382 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:40:07,290 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:40:07,873 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:40:08,068 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 11:40:08,300 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 11:40:08,373 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.633 seconds (JVM running for 4.345)
+2023-01-16 11:40:08,512 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=5, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 11:40:08,715 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 11:40:08,736 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 11:40:08,802 ERROR o.s.b.c.s.AbstractStep [main] Encountered an error executing step flatItemStepCD in job flatItemJobCD
+org.springframework.batch.item.file.FlatFileParseException: Parsing error at line: 1 in resource=[URL [file:files/clientesMultiplosTipos.txt]], input=[0,João,Silva,32,joao@test.com]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:189) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:93) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader$$FastClassBySpringCGLIB$$ebb633d0.invoke(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.item.file.FlatFileItemReader$$EnhancerBySpringCGLIB$$c61ff392.read(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.read(SimpleChunkProvider.java:180) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.24.jar:5.3.24]
+	at jdk.proxy2.$Proxy66.run(Unknown Source) ~[?:?]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:173) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:160) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:155) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:150) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:759) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:749) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
+	at com.developer.heart.arquivosflatleitorspringbatch.ArquivosFlatLeitorSpringBatchApplication.main(ArquivosFlatLeitorSpringBatchApplication.java:10) ~[classes/:?]
+Caused by: org.springframework.batch.item.file.transform.IncorrectTokenCountException: Incorrect number of tokens found in record: expected 4 actual 5
+	at org.springframework.batch.item.file.transform.AbstractLineTokenizer.tokenize(AbstractLineTokenizer.java:143) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:43) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:185) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	... 59 more
+2023-01-16 11:40:08,815 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 79ms
+2023-01-16 11:40:08,828 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 11:40:08,835 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=5, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [FAILED] in 124ms
+2023-01-16 11:40:08,839 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:40:08,903 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 11:42:03,161 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 13192 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:42:03,165 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:42:04,414 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:42:04,807 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:42:04,999 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 11:42:05,196 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 11:42:05,267 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.678 seconds (JVM running for 3.588)
+2023-01-16 11:42:05,394 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=6, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 11:42:05,434 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 11:42:05,454 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 11:42:05,523 ERROR o.s.b.c.s.AbstractStep [main] Encountered an error executing step flatItemStepCD in job flatItemJobCD
+org.springframework.batch.item.file.FlatFileParseException: Parsing error at line: 1 in resource=[URL [file:files/clientesMultiplosTipos.txt]], input=[0,João,Silva,32,joao@test.com]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:189) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:93) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader$$FastClassBySpringCGLIB$$ebb633d0.invoke(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.item.file.FlatFileItemReader$$EnhancerBySpringCGLIB$$540b5fb2.read(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.read(SimpleChunkProvider.java:180) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.24.jar:5.3.24]
+	at jdk.proxy2.$Proxy66.run(Unknown Source) ~[?:?]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:173) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:160) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:155) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:150) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:759) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:749) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
+	at com.developer.heart.arquivosflatleitorspringbatch.ArquivosFlatLeitorSpringBatchApplication.main(ArquivosFlatLeitorSpringBatchApplication.java:10) ~[classes/:?]
+Caused by: org.springframework.batch.item.file.transform.IncorrectTokenCountException: Incorrect number of tokens found in record: expected 4 actual 5
+	at org.springframework.batch.item.file.transform.AbstractLineTokenizer.tokenize(AbstractLineTokenizer.java:143) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:43) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:185) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	... 59 more
+2023-01-16 11:42:05,532 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 78ms
+2023-01-16 11:42:05,545 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 11:42:05,553 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=6, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [FAILED] in 124ms
+2023-01-16 11:42:05,563 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:42:05,575 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 11:43:36,537 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 16576 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:43:36,540 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:43:37,299 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:43:37,607 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:43:37,779 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 11:43:37,968 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 11:43:38,035 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 1.999 seconds (JVM running for 2.841)
+2023-01-16 11:43:38,157 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=7, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 11:43:38,183 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 11:43:38,213 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 11:43:38,279 ERROR o.s.b.c.s.AbstractStep [main] Encountered an error executing step flatItemStepCD in job flatItemJobCD
+org.springframework.batch.item.file.FlatFileParseException: Parsing error at line: 1 in resource=[URL [file:files/clientesMultiplosTipos.txt]], input=[0,João,Silva,32,joao@test.com]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:189) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:93) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader$$FastClassBySpringCGLIB$$ebb633d0.invoke(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.item.file.FlatFileItemReader$$EnhancerBySpringCGLIB$$681ec8c3.read(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.read(SimpleChunkProvider.java:180) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.24.jar:5.3.24]
+	at jdk.proxy2.$Proxy66.run(Unknown Source) ~[?:?]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:173) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:160) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:155) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:150) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:759) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:749) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
+	at com.developer.heart.arquivosflatleitorspringbatch.ArquivosFlatLeitorSpringBatchApplication.main(ArquivosFlatLeitorSpringBatchApplication.java:10) ~[classes/:?]
+Caused by: org.springframework.batch.item.file.transform.IncorrectTokenCountException: Incorrect number of tokens found in record: expected 4 actual 5
+	at org.springframework.batch.item.file.transform.AbstractLineTokenizer.tokenize(AbstractLineTokenizer.java:143) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:43) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:185) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	... 59 more
+2023-01-16 11:43:38,293 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 80ms
+2023-01-16 11:43:38,308 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 11:43:38,316 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=7, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [FAILED] in 133ms
+2023-01-16 11:43:38,319 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:43:38,330 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 11:45:06,733 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 20404 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:45:06,737 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:45:07,748 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:45:08,087 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:45:08,313 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 11:45:08,491 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 11:45:08,584 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.327 seconds (JVM running for 3.07)
+2023-01-16 11:45:08,720 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=8, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 11:45:08,752 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 11:45:08,778 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 11:45:08,870 ERROR o.s.b.c.s.AbstractStep [main] Encountered an error executing step flatItemStepCD in job flatItemJobCD
+org.springframework.batch.item.file.FlatFileParseException: Parsing error at line: 1 in resource=[URL [file:files/clientesMultiplosTipos.txt]], input=[0,João,Silva,32,joao@test.com]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:189) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:93) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader$$FastClassBySpringCGLIB$$ebb633d0.invoke(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.item.file.FlatFileItemReader$$EnhancerBySpringCGLIB$$add16a1.read(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.read(SimpleChunkProvider.java:180) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.24.jar:5.3.24]
+	at jdk.proxy2.$Proxy66.run(Unknown Source) ~[?:?]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:173) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:160) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:155) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:150) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:759) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:749) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
+	at com.developer.heart.arquivosflatleitorspringbatch.ArquivosFlatLeitorSpringBatchApplication.main(ArquivosFlatLeitorSpringBatchApplication.java:10) ~[classes/:?]
+Caused by: org.springframework.batch.item.file.transform.IncorrectTokenCountException: Incorrect number of tokens found in record: expected 4 actual 5
+	at org.springframework.batch.item.file.transform.AbstractLineTokenizer.tokenize(AbstractLineTokenizer.java:143) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:43) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:185) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	... 59 more
+2023-01-16 11:45:08,881 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 103ms
+2023-01-16 11:45:08,903 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 11:45:08,915 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=8, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [FAILED] in 161ms
+2023-01-16 11:45:08,920 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:45:08,932 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 11:50:20,676 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 15476 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:50:20,680 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:50:21,376 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:50:21,664 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:50:21,826 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 11:50:21,997 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 11:50:22,063 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 1.842 seconds (JVM running for 2.594)
+2023-01-16 11:50:22,187 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=9, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 11:50:22,225 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 11:50:22,245 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 11:50:22,311 ERROR o.s.b.c.s.AbstractStep [main] Encountered an error executing step flatItemStepCD in job flatItemJobCD
+org.springframework.batch.item.file.FlatFileParseException: Parsing error at line: 1 in resource=[URL [file:files/clientesMultiplosTipos.txt]], input=[0,João,Silva,32,joao@test]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:189) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:93) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader$$FastClassBySpringCGLIB$$ebb633d0.invoke(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.item.file.FlatFileItemReader$$EnhancerBySpringCGLIB$$45d5c026.read(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.read(SimpleChunkProvider.java:180) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.24.jar:5.3.24]
+	at jdk.proxy2.$Proxy66.run(Unknown Source) ~[?:?]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:173) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:160) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:155) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:150) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:759) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:749) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
+	at com.developer.heart.arquivosflatleitorspringbatch.ArquivosFlatLeitorSpringBatchApplication.main(ArquivosFlatLeitorSpringBatchApplication.java:10) ~[classes/:?]
+Caused by: org.springframework.batch.item.file.transform.IncorrectTokenCountException: Incorrect number of tokens found in record: expected 4 actual 5
+	at org.springframework.batch.item.file.transform.AbstractLineTokenizer.tokenize(AbstractLineTokenizer.java:143) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:43) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:185) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	... 59 more
+2023-01-16 11:50:22,325 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 79ms
+2023-01-16 11:50:22,339 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 11:50:22,347 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=9, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [FAILED] in 125ms
+2023-01-16 11:50:22,353 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:50:22,362 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 11:52:09,096 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 20120 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:52:09,100 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:52:09,976 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:52:10,265 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:52:10,445 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 11:52:10,609 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 11:52:10,681 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.158 seconds (JVM running for 2.94)
+2023-01-16 11:52:10,801 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=10, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 11:52:10,830 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 11:52:10,852 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 11:52:10,945 ERROR o.s.b.c.s.AbstractStep [main] Encountered an error executing step flatItemStepCD in job flatItemJobCD
+org.springframework.batch.item.file.FlatFileParseException: Parsing error at line: 1 in resource=[URL [file:files/clientesMultiplosTipos.txt]], input=[0,João,Silva,32]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:189) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader.read(AbstractItemCountingItemStreamItemReader.java:93) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.support.AbstractItemCountingItemStreamItemReader$$FastClassBySpringCGLIB$$ebb633d0.invoke(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:793) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:137) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:124) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:763) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:708) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.item.file.FlatFileItemReader$$EnhancerBySpringCGLIB$$540b5fb2.read(<generated>) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.doRead(SimpleChunkProvider.java:99) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.read(SimpleChunkProvider.java:180) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider$1.doInIteration(SimpleChunkProvider.java:126) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProvider.provide(SimpleChunkProvider.java:118) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:71) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.24.jar:5.3.24]
+	at jdk.proxy2.$Proxy66.run(Unknown Source) ~[?:?]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:173) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:160) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:155) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:150) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:759) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:749) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
+	at com.developer.heart.arquivosflatleitorspringbatch.ArquivosFlatLeitorSpringBatchApplication.main(ArquivosFlatLeitorSpringBatchApplication.java:10) ~[classes/:?]
+Caused by: org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors
+Field error in object 'target' on field 'idade': rejected value [Silva]; codes [typeMismatch.target.idade,typeMismatch.idade,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [target.idade,idade]; arguments []; default message [idade]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'idade'; nested exception is java.lang.NumberFormatException: For input string: "Silva"]
+	at org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper.mapFieldSet(BeanWrapperFieldSetMapper.java:201) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.mapping.DefaultLineMapper.mapLine(DefaultLineMapper.java:43) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.item.file.FlatFileItemReader.doRead(FlatFileItemReader.java:185) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	... 59 more
+2023-01-16 11:52:10,955 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 103ms
+2023-01-16 11:52:10,966 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 11:52:10,973 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=10, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [FAILED] in 147ms
+2023-01-16 11:52:10,977 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:52:10,991 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 11:54:46,423 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 13440 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:54:46,427 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:54:47,156 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:54:47,449 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:54:47,478 WARN o.s.c.a.AnnotationConfigApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flatItemJob' defined in class path resource [com/developer/heart/arquivosflatleitorspringbatch/job/FlatItemJobConfig.class]: Unsatisfied dependency expressed through method 'flatItemJob' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flatItemStep' defined in class path resource [com/developer/heart/arquivosflatleitorspringbatch/step/FlatItemStepConfig.class]: Unsatisfied dependency expressed through method 'flatItemStep' parameter 0; nested exception is org.springframework.beans.factory.NoUniqueBeanDefinitionException: No qualifying bean of type 'org.springframework.batch.item.ItemReader<com.developer.heart.arquivosflatleitorspringbatch.dto.Cliente>' available: expected single matching bean but found 2: flatFileItemReader,flatFileDelimitedReader
+2023-01-16 11:54:47,478 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:54:47,481 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-01-16 11:55:08,908 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 4244 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:55:08,911 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:55:09,739 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:55:10,072 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:55:10,418 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 11:55:10,666 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 11:55:10,785 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.365 seconds (JVM running for 3.289)
+2023-01-16 11:55:11,001 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=11, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 11:55:11,049 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 11:55:11,078 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 11:55:11,216 ERROR o.s.b.c.s.AbstractStep [main] Encountered an error executing step flatItemStepCD in job flatItemJobCD
+java.lang.ClassCastException: class com.developer.heart.arquivosflatleitorspringbatch.dto.Transacao cannot be cast to class com.developer.heart.arquivosflatleitorspringbatch.dto.Cliente (com.developer.heart.arquivosflatleitorspringbatch.dto.Transacao and com.developer.heart.arquivosflatleitorspringbatch.dto.Cliente are in unnamed module of loader 'app')
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092) ~[?:?]
+	at com.developer.heart.arquivosflatleitorspringbatch.writer.FlatItemWriterConfig.lambda$flatFileItemWriter$0(FlatItemWriterConfig.java:13) ~[classes/:?]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.writeItems(SimpleChunkProcessor.java:193) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.doWrite(SimpleChunkProcessor.java:159) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.write(SimpleChunkProcessor.java:294) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.process(SimpleChunkProcessor.java:217) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:77) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.24.jar:5.3.24]
+	at jdk.proxy2.$Proxy66.run(Unknown Source) ~[?:?]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:173) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:160) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:155) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:150) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:759) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:749) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
+	at com.developer.heart.arquivosflatleitorspringbatch.ArquivosFlatLeitorSpringBatchApplication.main(ArquivosFlatLeitorSpringBatchApplication.java:10) ~[classes/:?]
+2023-01-16 11:55:11,234 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 155ms
+2023-01-16 11:55:11,254 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 11:55:11,269 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=11, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [FAILED] in 218ms
+2023-01-16 11:55:11,280 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:55:11,298 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 11:55:41,684 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 16752 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:55:41,687 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:55:42,482 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:55:42,789 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:55:42,965 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 11:55:43,150 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 11:55:43,224 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.035 seconds (JVM running for 2.798)
+2023-01-16 11:55:43,352 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=12, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 11:55:43,385 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 11:55:43,406 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 11:55:43,495 ERROR o.s.b.c.s.AbstractStep [main] Encountered an error executing step flatItemStepCD in job flatItemJobCD
+java.lang.ClassCastException: class com.developer.heart.arquivosflatleitorspringbatch.dto.Transacao cannot be cast to class com.developer.heart.arquivosflatleitorspringbatch.dto.Cliente (com.developer.heart.arquivosflatleitorspringbatch.dto.Transacao and com.developer.heart.arquivosflatleitorspringbatch.dto.Cliente are in unnamed module of loader 'app')
+	at java.util.ArrayList.forEach(ArrayList.java:1511) ~[?:?]
+	at java.util.Collections$UnmodifiableCollection.forEach(Collections.java:1092) ~[?:?]
+	at com.developer.heart.arquivosflatleitorspringbatch.writer.FlatItemWriterConfig.lambda$flatFileItemWriter$0(FlatItemWriterConfig.java:13) ~[classes/:?]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.writeItems(SimpleChunkProcessor.java:193) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.doWrite(SimpleChunkProcessor.java:159) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.write(SimpleChunkProcessor.java:294) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.process(SimpleChunkProcessor.java:217) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:77) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:152) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:413) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:320) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:149) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) ~[spring-core-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:128) ~[spring-batch-core-4.3.7.jar:4.3.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.24.jar:5.3.24]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.24.jar:5.3.24]
+	at jdk.proxy2.$Proxy66.run(Unknown Source) ~[?:?]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:173) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:160) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:155) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:150) ~[spring-boot-autoconfigure-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:759) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:749) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.7.jar:2.7.7]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.7.jar:2.7.7]
+	at com.developer.heart.arquivosflatleitorspringbatch.ArquivosFlatLeitorSpringBatchApplication.main(ArquivosFlatLeitorSpringBatchApplication.java:10) ~[classes/:?]
+2023-01-16 11:55:43,502 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 96ms
+2023-01-16 11:55:43,512 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 11:55:43,518 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=12, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [FAILED] in 136ms
+2023-01-16 11:55:43,522 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:55:43,532 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 11:56:15,071 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 16432 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 11:56:15,079 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 11:56:16,151 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 11:56:16,500 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 11:56:16,798 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 11:56:16,998 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 11:56:17,099 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.72 seconds (JVM running for 3.747)
+2023-01-16 11:56:17,377 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=13, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 11:56:17,420 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 11:56:17,450 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 11:56:17,706 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 256ms
+2023-01-16 11:56:17,722 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 11:56:17,730 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=13, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [COMPLETED] in 311ms
+2023-01-16 11:56:17,739 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 11:56:17,754 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

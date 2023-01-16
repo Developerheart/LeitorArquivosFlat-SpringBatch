@@ -7,6 +7,7 @@ import org.springframework.batch.core.configuration.annotation.StepBuilderFactor
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +18,12 @@ public class FlatItemStepConfig {
     private StepBuilderFactory stepBuilderFactory;
 
     @Bean
-    Step flatItemStep(ItemReader<Cliente> flatFileDelimitedReader, ItemWriter<Cliente> flatFileItemWriter, JobExecutionListener flatItemJobExecutionListener)  {
+    Step flatItemStep(@Qualifier("flatFileMultiplyFormatsReder") ItemReader flatFileMultiplyFormatsReder, ItemWriter<Cliente> flatFileItemWriter, JobExecutionListener flatItemJobExecutionListener)  {
         return stepBuilderFactory
                 .get("flatItemStepCD")
                 .listener(flatItemJobExecutionListener)
                 .<Cliente, Cliente>chunk(1)
-                .reader(flatFileDelimitedReader)
+                .reader(flatFileMultiplyFormatsReder)
                 .writer(flatFileItemWriter)
                 .build();
     }
