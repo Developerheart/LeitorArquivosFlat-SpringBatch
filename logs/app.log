@@ -686,3 +686,78 @@ java.lang.ClassCastException: class com.developer.heart.arquivosflatleitorspring
 2023-01-16 11:56:17,730 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=13, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [COMPLETED] in 311ms
 2023-01-16 11:56:17,739 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2023-01-16 11:56:17,754 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 13:02:36,344 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 16056 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 13:02:36,349 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 13:02:37,142 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 13:02:37,992 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 13:02:38,272 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 13:02:38,492 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 13:02:38,599 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.878 seconds (JVM running for 4.857)
+2023-01-16 13:02:38,746 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=14, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 13:02:38,782 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 13:02:38,799 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 13:02:38,935 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 134ms
+2023-01-16 13:02:38,943 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 13:02:38,949 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=14, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [COMPLETED] in 168ms
+2023-01-16 13:02:38,955 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 13:02:38,966 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 13:03:19,774 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 15092 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 13:03:19,778 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 13:03:20,733 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 13:03:21,138 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 13:03:21,329 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 13:03:21,506 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 13:03:21,591 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.433 seconds (JVM running for 3.336)
+2023-01-16 13:03:21,764 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=15, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 13:03:21,793 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 13:03:21,811 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 13:03:21,930 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 119ms
+2023-01-16 13:03:21,938 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 13:03:21,944 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=15, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [COMPLETED] in 154ms
+2023-01-16 13:03:21,948 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 13:03:21,957 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 13:04:20,593 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 5604 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 13:04:20,596 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 13:04:21,325 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 13:04:21,640 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 13:04:21,798 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 13:04:21,971 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 13:04:22,040 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 1.907 seconds (JVM running for 2.656)
+2023-01-16 13:04:22,158 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=16, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 13:04:22,191 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 13:04:22,213 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 13:04:22,334 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 121ms
+2023-01-16 13:04:22,346 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 13:04:22,352 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=16, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [COMPLETED] in 165ms
+2023-01-16 13:04:22,357 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 13:04:22,367 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 13:04:33,633 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 19024 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 13:04:33,637 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 13:04:34,459 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 13:04:34,880 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 13:04:35,139 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 13:04:35,335 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 13:04:35,428 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 2.36 seconds (JVM running for 3.251)
+2023-01-16 13:04:35,560 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=17, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 13:04:35,587 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 13:04:35,605 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 13:04:35,744 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 139ms
+2023-01-16 13:04:35,753 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 13:04:35,760 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=17, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [COMPLETED] in 174ms
+2023-01-16 13:04:35,764 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 13:04:35,776 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-01-16 13:05:29,089 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 20940 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 13:05:29,093 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 13:05:29,785 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 13:05:30,074 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 13:05:30,238 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 13:05:30,408 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 13:05:30,478 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 1.86 seconds (JVM running for 2.647)
+2023-01-16 13:05:30,606 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=18, arquivoClientes=file:files/clientesMultiplosTipos.txt}]
+2023-01-16 13:05:30,638 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 13:05:30,659 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 13:05:30,773 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 113ms
+2023-01-16 13:05:30,786 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 13:05:30,794 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=18, arquivoClientes=file:files/clientesMultiplosTipos.txt}] and the following status: [COMPLETED] in 161ms
+2023-01-16 13:05:30,799 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 13:05:30,809 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
