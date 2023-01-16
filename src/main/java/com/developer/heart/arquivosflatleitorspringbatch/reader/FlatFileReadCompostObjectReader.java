@@ -3,13 +3,16 @@ package com.developer.heart.arquivosflatleitorspringbatch.reader;
 import com.developer.heart.arquivosflatleitorspringbatch.dto.Cliente;
 import com.developer.heart.arquivosflatleitorspringbatch.dto.Transacao;
 import org.springframework.batch.item.*;
+import org.springframework.batch.item.file.FlatFileItemReader;
+import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
+import org.springframework.core.io.Resource;
 
-public class FlatFileReadCompostObjectReader implements ItemStreamReader {
+public class FlatFileReadCompostObjectReader implements ItemStreamReader, ResourceAwareItemReaderItemStream {
 
     private Object objectAtual;
-    private final ItemStreamReader<Object> delegate;
+    private final FlatFileItemReader<Object> delegate;
 
-    public FlatFileReadCompostObjectReader(ItemStreamReader<Object> delegate) {
+    public FlatFileReadCompostObjectReader(FlatFileItemReader<Object> delegate) {
         this.delegate = delegate;
     }
 
@@ -45,5 +48,10 @@ public class FlatFileReadCompostObjectReader implements ItemStreamReader {
     @Override
     public void close() throws ItemStreamException {
         delegate.close();
+    }
+
+    @Override
+    public void setResource(Resource resource) {
+        delegate.setResource(resource);
     }
 }

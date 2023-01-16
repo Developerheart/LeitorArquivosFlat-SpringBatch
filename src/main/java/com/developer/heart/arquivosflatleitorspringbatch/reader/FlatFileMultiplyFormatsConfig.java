@@ -15,7 +15,7 @@ public class FlatFileMultiplyFormatsConfig {
 
     @StepScope
     @Bean
-    FlatFileItemReader<?> flatFileMultiplyFormatsReder(@Value("#{jobParameters['arquivoClientes']}") Resource resource, LineMapper lineMapper) {
+    FlatFileItemReader<?> flatFileMultiplyFormatsReader(@Value("#{jobParameters['arquivoClientes']}") Resource resource, LineMapper lineMapper) {
         return new FlatFileItemReaderBuilder<>()
                 .name("flatFileMultiplyFormatsReder")
                 .resource(resource)
