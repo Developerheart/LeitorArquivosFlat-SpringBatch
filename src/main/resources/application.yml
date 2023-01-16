@@ -1,0 +1,2 @@
+logging:
+  config: C:\\Users\\leona\\IdeaProjects\HelloWorldSpringBatch\\config\security\\log4j.xml

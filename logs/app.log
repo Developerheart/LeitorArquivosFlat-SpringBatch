@@ -1,0 +1,15 @@
+2023-01-16 10:51:48,984 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Starting ArquivosFlatLeitorSpringBatchApplication using Java 17.0.5 on Aurora with PID 16548 (C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch\target\classes started by leona in C:\sefaz\gitlab\ArquivosFlatLeitorSpringBatch)
+2023-01-16 10:51:48,989 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 10:51:50,255 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-01-16 10:51:50,719 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-01-16 10:51:50,924 INFO o.s.b.c.r.s.JobRepositoryFactoryBean [main] No database type set, using meta data indicating: MYSQL
+2023-01-16 10:51:51,136 INFO o.s.b.c.l.s.SimpleJobLauncher [main] No TaskExecutor has been set, defaulting to synchronous executor.
+2023-01-16 10:51:51,254 INFO c.d.h.a.ArquivosFlatLeitorSpringBatchApplication [main] Started ArquivosFlatLeitorSpringBatchApplication in 3.061 seconds (JVM running for 4.464)
+2023-01-16 10:51:51,465 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] launched with the following parameters: [{run.id=2, arquivoClientes=file:files/clientes.txt}]
+2023-01-16 10:51:51,514 INFO c.d.h.a.l.FlatItemStepListener [main] Iniciando step
+2023-01-16 10:51:51,537 INFO o.s.b.c.j.SimpleStepHandler [main] Executing step: [flatItemStepCD]
+2023-01-16 10:51:51,722 INFO o.s.b.c.s.AbstractStep [main] Step: [flatItemStepCD] executed in 184ms
+2023-01-16 10:51:51,743 INFO c.d.h.a.l.FlatItemStepListener [main] Finalizando step
+2023-01-16 10:51:51,755 INFO o.s.b.c.l.s.SimpleJobLauncher [main] Job: [SimpleJob: [name=flatItemJobCD]] completed with the following parameters: [{run.id=2, arquivoClientes=file:files/clientes.txt}] and the following status: [COMPLETED] in 238ms
+2023-01-16 10:51:51,761 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-01-16 10:51:51,776 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
