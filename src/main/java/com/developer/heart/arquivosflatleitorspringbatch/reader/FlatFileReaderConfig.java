@@ -21,7 +21,21 @@ public class FlatFileReaderConfig {
                 .resource(resource)
                 .fixedLength()
                 .columns(new Range[]{new Range(1, 10), new Range(11, 20), new Range(21, 23), new Range(24, 43)})
-                .names(new String[]{"nome", "sobrenome", "idade", "email"})
+                .names("nome", "sobrenome", "idade", "email")
+                .targetType(Cliente.class)
+                .build();
+
+    }
+
+
+    @Bean
+    @StepScope
+    FlatFileItemReader<Cliente> flatFileDelimitedReader(@Value("#{jobParameters['arquivoClientes']}") Resource resource) {
+        return new FlatFileItemReaderBuilder<Cliente>()
+                .name("flatFileDelimitedReader")
+                .resource(resource)
+                .delimited()
+                .names("nome", "sobrenome", "idade", "email")
                 .targetType(Cliente.class)
                 .build();
 

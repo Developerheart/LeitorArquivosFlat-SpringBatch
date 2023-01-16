@@ -17,12 +17,12 @@ public class FlatItemStepConfig {
     private StepBuilderFactory stepBuilderFactory;
 
     @Bean
-    Step flatItemStep(ItemReader<Cliente> flatFileItemReader, ItemWriter<Cliente> flatFileItemWriter, JobExecutionListener flatItemJobExecutionListener)  {
+    Step flatItemStep(ItemReader<Cliente> flatFileDelimitedReader, ItemWriter<Cliente> flatFileItemWriter, JobExecutionListener flatItemJobExecutionListener)  {
         return stepBuilderFactory
                 .get("flatItemStepCD")
                 .listener(flatItemJobExecutionListener)
                 .<Cliente, Cliente>chunk(1)
-                .reader(flatFileItemReader)
+                .reader(flatFileDelimitedReader)
                 .writer(flatFileItemWriter)
                 .build();
     }
